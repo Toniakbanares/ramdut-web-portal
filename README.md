@@ -8,6 +8,12 @@ Um site SaaS moderno e responsivo construído com React, TypeScript e Tailwind C
 
 ## 🌟 Características Principais
 
+### 💎 Área Premium
+- **10 recursos exclusivos** - Usuários ilimitados, suporte 24/7, SSL dedicado, etc.
+- **Comparação de planos** - Free vs Premium com CTAs otimizados
+- **Conversão B2B** - Integração WhatsApp e email para leads corporativos
+- **Design diferenciado** - Gradientes dourados e elementos premium
+
 ### 🌍 Suporte Multilíngue
 - **Português (Brasil)** - Idioma padrão
 - **English (US)** - Inglês americano
@@ -48,14 +54,18 @@ Um site SaaS moderno e responsivo construído com React, TypeScript e Tailwind C
 - **WhatsApp**: [+55 51 98022-8329](https://wa.me/5551980228329)
 - **Localização**: Porto Alegre, Brasil
 
-## 🚀 Deploy
+## 🚀 Deploy no GitHub Pages
 
-Este projeto está configurado para deploy automático no GitHub Pages. Qualquer push para a branch `main` irá disparar o deploy.
+### Configuração Automática
+1. Fork este repositório
+2. Vá em **Settings > Pages** no GitHub
+3. Em **Source**, selecione **"GitHub Actions"**
+4. Faça push para a branch `main` - deploy automático!
 
-### Deploy Manual
+### Desenvolvimento Local
 ```bash
-npm run build
-npm run deploy
+npm install
+npm run dev
 ```
 
 ## 📄 Licença

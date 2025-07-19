@@ -69,6 +69,9 @@ const Header = () => {
             <button onClick={() => scrollToSection('pricing')} className="hover:text-primary transition-colors">
               {t('nav.pricing')}
             </button>
+            <button onClick={() => scrollToSection('premium')} className="hover:text-primary transition-colors font-medium text-primary">
+              {t('nav.premium')}
+            </button>
             <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary transition-colors">
               {t('nav.testimonials')}
             </button>
@@ -150,6 +153,9 @@ const Header = () => {
             </button>
             <button onClick={() => scrollToSection('pricing')} className="block w-full text-left hover:text-primary transition-colors">
               {t('nav.pricing')}
+            </button>
+            <button onClick={() => scrollToSection('premium')} className="block w-full text-left hover:text-primary transition-colors font-medium text-primary">
+              {t('nav.premium')}
             </button>
             <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left hover:text-primary transition-colors">
               {t('nav.testimonials')}
