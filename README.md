@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# 🚀 Ramdut - Soluções Digitais Inovadoras
 
-## Project info
+[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen.svg)](https://ramdut.github.io/)
+[![Language](https://img.shields.io/badge/languages-5-blue.svg)](#idiomas-suportados)
+[![Themes](https://img.shields.io/badge/themes-4-purple.svg)](#temas-visuais)
 
-**URL**: https://lovable.dev/projects/9f46078c-25b2-4050-ae7f-2a6298303587
+Um site SaaS moderno e responsivo construído com React, TypeScript e Tailwind CSS, apresentando soluções digitais inovadoras com suporte multilíngue e múltiplos temas visuais.
 
-## How can I edit this code?
+## 🌟 Características Principais
 
-There are several ways of editing your application.
+### 🌍 Suporte Multilíngue
+- **Português (Brasil)** - Idioma padrão
+- **English (US)** - Inglês americano
+- **Español** - Espanhol
+- **한국어** - Coreano
+- **中文** - Chinês simplificado
 
-**Use Lovable**
+### 🎨 Temas Visuais
+- **Light Mode** - Tema claro elegante
+- **Dark Mode** - Tema escuro sofisticado
+- **Green Mode** - Tema eco-friendly
+- **Blue Mode** - Tema profissional azul
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9f46078c-25b2-4050-ae7f-2a6298303587) and start prompting.
+### 🛒 Integração E-commerce
+- Link direto para [Loja RAMDUT](https://ramdut.lojavirtualnuvem.com.br/admin/v2/products)
+- Botão flutuante do WhatsApp para suporte
+- Formulário de contato integrado
 
-Changes made via Lovable will be committed automatically to this repo.
+### ⚡ Performance e SEO
+- Otimizado para GitHub Pages
+- SEO completo com Open Graph
+- Lazy loading de imagens
+- Animações suaves e responsivas
+- PWA-ready
 
-**Use your preferred IDE**
+## 🛠️ Stack Tecnológico
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS + CSS Custom Properties
+- **UI Components**: Shadcn/UI + Radix UI
+- **Icons**: Lucide React
+- **Build**: Vite
+- **Deploy**: GitHub Pages
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📧 Contato e Suporte
 
-Follow these steps:
+- **Email**: [ramdut2025@gmail.com](mailto:ramdut2025@gmail.com)
+- **WhatsApp**: [+55 51 98022-8329](https://wa.me/5551980228329)
+- **Localização**: Porto Alegre, Brasil
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Deploy
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Este projeto está configurado para deploy automático no GitHub Pages. Qualquer push para a branch `main` irá disparar o deploy.
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Deploy Manual
+```bash
+npm run build
+npm run deploy
 ```
 
-**Edit a file directly in GitHub**
+## 📄 Licença
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+© 2025 Ramdut. Todos os direitos reservados.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9f46078c-25b2-4050-ae7f-2a6298303587) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Feito com ❤️ pela equipe Ramdut**
