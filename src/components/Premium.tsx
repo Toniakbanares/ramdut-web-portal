@@ -13,16 +13,25 @@ import {
   Check,
   Crown,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  QrCode,
+  CreditCard,
+  Clock
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
+import jungleBackground from '../assets/jungle-background.jpg';
+import oceanBackground from '../assets/ocean-background.jpg';
+import pixQrCode from '../assets/pix-qr-code.png';
 
 const Premium = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const [showPixPayment, setShowPixPayment] = useState(false);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const premiumFeatures = [
@@ -156,9 +165,30 @@ const Premium = () => {
     window.open(`mailto:ramdut2025@gmail.com?subject=${subject}&body=${body}`, '_blank');
   };
 
+  const generatePixPayment = () => {
+    const pixKey = '02366936036'; // CPF do usuário
+    const amount = '299.00';
+    const description = 'Plano Premium Ramdut';
+    const pixUrl = `00020126360014br.gov.bcb.pix0114${pixKey}5204000053039865802BR5913Ramdut Premium6009SAO PAULO62070503***630445B0`;
+    
+    // Gerar link do Pix para compartilhamento
+    const shareText = `Pix Copia e Cola: ${pixUrl}`;
+    navigator.clipboard?.writeText(shareText);
+    
+    setShowPixPayment(true);
+  };
+
+  const backgroundImage = theme === 'green' ? jungleBackground : theme === 'blue' ? oceanBackground : undefined;
+
   return (
     <section id="premium" className="py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 relative overflow-hidden">
       {/* Background decoration */}
+      {backgroundImage && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20" 
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+      )}
       <div className="absolute inset-0 bg-hero-gradient opacity-30" />
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -183,8 +213,17 @@ const Premium = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={openWhatsAppPremium}
+              onClick={generatePixPayment}
               className="bg-brand-gradient hover:opacity-90 text-white h-12 px-8"
+            >
+              <QrCode className="w-5 h-5 mr-2" />
+              {t('premium.pix.payment')}
+            </Button>
+            
+            <Button 
+              onClick={openWhatsAppPremium}
+              variant="outline" 
+              className="border-2 border-primary/20 hover:border-primary/40 glass h-12 px-8"
             >
               <Sparkles className="w-5 h-5 mr-2" />
               {t('premium.cta.primary')}
@@ -283,7 +322,7 @@ const Premium = () => {
                     </ul>
                     
                     <Button 
-                      onClick={tier.isPremium ? openWhatsAppPremium : undefined}
+                      onClick={tier.isPremium ? generatePixPayment : undefined}
                       className={`w-full h-12 ${
                         tier.isPremium 
                           ? 'bg-brand-gradient hover:opacity-90 text-white' 
@@ -292,7 +331,14 @@ const Premium = () => {
                       variant={tier.isPremium ? 'default' : 'outline'}
                       disabled={!tier.isPremium}
                     >
-                      {t(tier.ctaKey)}
+                      {tier.isPremium ? (
+                        <>
+                          <QrCode className="w-4 h-4 mr-2" />
+                          {t('premium.pix.payment')}
+                        </>
+                      ) : (
+                        t(tier.ctaKey)
+                      )}
                     </Button>
                   </CardContent>
                 </Card>
@@ -300,6 +346,66 @@ const Premium = () => {
             ))}
           </div>
         </div>
+
+        {/* Pix Payment Section */}
+        {showPixPayment && (
+          <div className="mb-16">
+            <Card className="max-w-md mx-auto glass">
+              <CardHeader className="text-center">
+                <CardTitle className="flex items-center justify-center gap-2">
+                  <QrCode className="w-6 h-6 text-primary" />
+                  {t('premium.pix.title')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-6">
+                <div className="flex justify-center">
+                  <img 
+                    src={pixQrCode} 
+                    alt="QR Code Pix" 
+                    className="w-48 h-48 border rounded-lg shadow-lg"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-green-600">
+                    <Clock className="w-4 h-4" />
+                    <span className="text-sm font-medium">{t('premium.pix.instant')}</span>
+                  </div>
+                  
+                  <p className="text-2xl font-bold text-primary">R$ 299,00</p>
+                  <p className="text-sm text-muted-foreground">{t('premium.pix.description')}</p>
+                </div>
+
+                <div className="bg-primary/5 p-4 rounded-lg">
+                  <p className="text-sm font-medium mb-2">{t('premium.pix.instructions')}</p>
+                  <div className="text-xs text-muted-foreground space-y-1">
+                    <p>1. {t('premium.pix.step1')}</p>
+                    <p>2. {t('premium.pix.step2')}</p>
+                    <p>3. {t('premium.pix.step3')}</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <Button 
+                    onClick={openWhatsAppPremium}
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    <Headphones className="w-4 h-4 mr-2" />
+                    {t('premium.pix.support')}
+                  </Button>
+                  
+                  <Button 
+                    onClick={() => setShowPixPayment(false)}
+                    variant="outline"
+                    className="border-primary/20 hover:border-primary/40"
+                  >
+                    {t('premium.pix.back')}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
 
         {/* Contact Information */}
         <div className="text-center glass rounded-2xl p-8 max-w-2xl mx-auto">

@@ -115,6 +115,18 @@ const translations = {
     'premium.whatsapp.message': 'Olá! Tenho interesse no plano Premium da Ramdut. Gostaria de saber mais detalhes sobre os recursos exclusivos e preços.',
     'premium.email.subject': 'Interesse no Plano Premium - Ramdut',
     'premium.email.body': 'Olá equipe Ramdut,\n\nTenho interesse em conhecer mais sobre o plano Premium e seus recursos exclusivos.\n\nAguardo retorno.\n\nObrigado!',
+    
+    // Pix Payment
+    'premium.pix.payment': 'Pagar com Pix',
+    'premium.pix.title': 'Pagamento via Pix',
+    'premium.pix.instant': 'Ativação Imediata',
+    'premium.pix.description': 'Após o pagamento, todos os recursos premium são ativados imediatamente.',
+    'premium.pix.instructions': 'Como pagar:',
+    'premium.pix.step1': 'Escaneie o QR Code com seu banco',
+    'premium.pix.step2': 'Confirme o pagamento de R$ 299,00',
+    'premium.pix.step3': 'Recursos ativados automaticamente',
+    'premium.pix.support': 'Suporte WhatsApp',
+    'premium.pix.back': 'Voltar',
   },
   en: {
     // Navigation
@@ -211,6 +223,18 @@ const translations = {
     'premium.whatsapp.message': 'Hello! I am interested in Ramdut\'s Premium plan. I would like to know more details about the exclusive features and pricing.',
     'premium.email.subject': 'Interest in Premium Plan - Ramdut',
     'premium.email.body': 'Hello Ramdut team,\n\nI am interested in learning more about the Premium plan and its exclusive features.\n\nI await your response.\n\nThank you!',
+    
+    // Pix Payment
+    'premium.pix.payment': 'Pay with Pix',
+    'premium.pix.title': 'Pix Payment',
+    'premium.pix.instant': 'Instant Activation',
+    'premium.pix.description': 'After payment, all premium features are activated immediately.',
+    'premium.pix.instructions': 'How to pay:',
+    'premium.pix.step1': 'Scan QR Code with your bank app',
+    'premium.pix.step2': 'Confirm payment of R$ 299.00',
+    'premium.pix.step3': 'Features activated automatically',
+    'premium.pix.support': 'WhatsApp Support',
+    'premium.pix.back': 'Back',
   },
   es: {
     // Navigation
@@ -301,6 +325,18 @@ const translations = {
     'premium.whatsapp.message': '¡Hola! Estoy interesado en el plan Premium de Ramdut. Me gustaría saber más detalles sobre las características exclusivas y precios.',
     'premium.email.subject': 'Interés en Plan Premium - Ramdut',
     'premium.email.body': 'Hola equipo Ramdut,\n\nEstoy interesado en conocer más sobre el plan Premium y sus características exclusivas.\n\nEspero su respuesta.\n\n¡Gracias!',
+    
+    // Pix Payment
+    'premium.pix.payment': 'Pagar con Pix',
+    'premium.pix.title': 'Pago via Pix',
+    'premium.pix.instant': 'Activación Inmediata',
+    'premium.pix.description': 'Después del pago, todas las características premium se activan inmediatamente.',
+    'premium.pix.instructions': 'Cómo pagar:',
+    'premium.pix.step1': 'Escanea el código QR con tu banco',
+    'premium.pix.step2': 'Confirma el pago de R$ 299,00',
+    'premium.pix.step3': 'Características activadas automáticamente',
+    'premium.pix.support': 'Soporte WhatsApp',
+    'premium.pix.back': 'Volver',
   },
   ko: {
     // Navigation
@@ -391,6 +427,18 @@ const translations = {
     'premium.whatsapp.message': '안녕하세요! Ramdut 프리미엄 플랜에 관심이 있습니다. 독점 기능과 가격에 대한 자세한 내용을 알고 싶습니다.',
     'premium.email.subject': '프리미엄 플랜 관심 - Ramdut',
     'premium.email.body': '안녕하세요 Ramdut 팀,\n\n프리미엄 플랜과 독점 기능에 대해 더 알아보고 싶습니다.\n\n답변을 기다리겠습니다.\n\n감사합니다!',
+    
+    // Pix Payment
+    'premium.pix.payment': 'Pix로 결제',
+    'premium.pix.title': 'Pix 결제',
+    'premium.pix.instant': '즉시 활성화',
+    'premium.pix.description': '결제 후 모든 프리미엄 기능이 즉시 활성화됩니다.',
+    'premium.pix.instructions': '결제 방법:',
+    'premium.pix.step1': '은행 앱으로 QR 코드 스캔',
+    'premium.pix.step2': 'R$ 299,00 결제 확인',
+    'premium.pix.step3': '기능 자동 활성화',
+    'premium.pix.support': 'WhatsApp 지원',
+    'premium.pix.back': '뒤로',
   },
   zh: {
     // Navigation
@@ -481,6 +529,18 @@ const translations = {
     'premium.whatsapp.message': '您好！我对Ramdut的高级计划感兴趣。我想了解更多关于独家功能和定价的详细信息。',
     'premium.email.subject': '对高级计划感兴趣 - Ramdut',
     'premium.email.body': 'Ramdut团队您好，\n\n我有兴趣了解更多关于高级计划及其独家功能的信息。\n\n期待您的回复。\n\n谢谢！',
+    
+    // Pix Payment
+    'premium.pix.payment': '使用Pix支付',
+    'premium.pix.title': 'Pix支付',
+    'premium.pix.instant': '即时激活',
+    'premium.pix.description': '支付后，所有高级功能立即激活。',
+    'premium.pix.instructions': '如何支付：',
+    'premium.pix.step1': '使用银行应用扫描二维码',
+    'premium.pix.step2': '确认支付R$ 299.00',
+    'premium.pix.step3': '功能自动激活',
+    'premium.pix.support': 'WhatsApp支持',
+    'premium.pix.back': '返回',
   },
 };
 
