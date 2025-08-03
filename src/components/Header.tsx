@@ -48,10 +48,13 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-brand-gradient rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-xl">R</span>
             </div>
+            <span className="text-2xl font-display font-bold bg-brand-gradient bg-clip-text text-transparent">
+              Ramdut
+            </span>
           </div>
 
           {/* Desktop Navigation */}
