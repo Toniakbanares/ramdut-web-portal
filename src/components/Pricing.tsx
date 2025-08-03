@@ -11,13 +11,28 @@ const Pricing = () => {
 
   const plans = [
     {
+      name: 'Free',
+      price: 'R$ 0',
+      period: '/mês',
+      description: 'Perfeito para começar e explorar a plataforma',
+      icon: Zap,
+      features: [
+        'Até 5 usuários',
+        'Suporte por email',
+        'Dashboard básico',
+        'Integrações essenciais'
+      ],
+      popular: false,
+      gradient: 'from-gray-500 to-slate-500'
+    },
+    {
       name: 'Starter',
       price: 'R$ 99',
       period: '/mês',
       description: 'Perfeito para pequenas empresas que estão começando',
       icon: Zap,
       features: [
-        'Até 5 usuários',
+        'Até 10 usuários',
         'Suporte por email',
         'Dashboard básico',
         'Integrações essenciais',
@@ -107,7 +122,7 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             const isVisible = visibleItems.includes(index);
